@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package edoo_s8_teoria_Ejercicios;
+package edoo_s8_teoria_3_Ejercicios;
 
 import javax.swing.JOptionPane;
 
@@ -213,20 +209,17 @@ public class FrmEjercicios extends javax.swing.JFrame {
         Pila<Character> p = new Pila<>();
         StringBuilder resultado = new StringBuilder();
 
-        while (num != 0) {
+        while(num!=0){
             int residuo = num % base;
-            if (residuo < 10) {
-                p.push((char) (residuo + 48));
-            } else {
-                p.push((char) (residuo + 55));
-            }
-            num /= base;
+            if (residuo < 10)
+                p.push((char)(residuo + 48));
+            else
+                p.push((char)(residuo + 55));
+            num/=base;
         }
-
-        while (!p.isEmpty()) {
+        while (!p.isEmpty())
             resultado.append(p.pop());
-        }
-
+        
         JOptionPane.showMessageDialog(null, "Número en base " + base + ": " + resultado.toString());
     }
     

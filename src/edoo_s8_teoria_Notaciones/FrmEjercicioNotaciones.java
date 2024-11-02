@@ -143,7 +143,7 @@ public class FrmEjercicioNotaciones extends javax.swing.JFrame {
                 if(p.isEmpty() || ((x=='*' || x=='/') && (p.top() == '+' || p.top() == '-')) || p.top()=='(')
                     p.push(x);
                 else{
-                    while((!p.isEmpty())             &&               ((x=='+') || (x=='-') || (x=='*' && p.top()=='/') || (x=='/' && p.top()=='*')) )
+                    while((!p.isEmpty())     &&    ((x=='+') || (x=='-') || (x=='*' && p.top()=='/') || (x=='/' && p.top()=='*')) )
                         postfija.append(p.pop());
                     p.push(x);
                 }
@@ -156,6 +156,8 @@ public class FrmEjercicioNotaciones extends javax.swing.JFrame {
         return postfija.toString();
     }
     
+    
+  
     public double calcular(String expresion){
         Pila<Double> p = new Pila();
         

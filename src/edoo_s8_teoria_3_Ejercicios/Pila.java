@@ -1,4 +1,4 @@
-package edoo_s8_teoria_Ejercicios;
+package edoo_s8_teoria_3_Ejercicios;
 
 /**
  *
